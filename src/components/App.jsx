@@ -7,9 +7,9 @@ import css from './Phonebook.module.css';
 
 const ST_KEY = 'ST_KEY';
 
-export const AppHooks = () => {
-  const [contacts, setContacts] = useState(() =>
-    JSON.parse(localStorage.getItem(ST_KEY) ?? [])
+export const App = () => {
+  const [contacts, setContacts] = useState(
+    JSON.parse(localStorage.getItem(ST_KEY)) ?? []
   );
   const [filter, setFilter] = useState('');
 
